@@ -2,9 +2,28 @@ pipeline {
     agent any
 
     stages {
+
+        stage('Checkout') {
+            steps {
+                echo 'Checking out code'
+            }
+        }
+
         stage('Build') {
             steps {
-                echo 'Hello, Jenkins!'
+                echo 'Build Successful'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running Tests'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deployment Completed'
             }
         }
     }
